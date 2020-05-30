@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+  <div class="row">
+      <table class="table">
+          <thead class="thead-dark">
+          <tr>
+              <th class="text-center">ID</th>
+              <th class="text-center">Title</th>
+              <th class="text-center">Body</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let retData of dataRet | async ">
+              <td class="text-center" style="width: 15px;">{{ retData.id }}</td>
+              <td class="text-center" style="width: 15px;">{{retData.title}}</td>
+              <td class="text-center" style="width: 200px;">{{retData.completed}}</td>
+          </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
+</body>
+</html>
